@@ -21,7 +21,7 @@ if prompt := st.chat_input("Ask a question"):
         st.markdown(prompt)
 
     # Prepare the context with the system message
-    context = [{"role": "system", "content": "You are a helpful financial advisor named Alfred."}] + [
+    context = [{"role": "system", "content": "You are a helpful financial advisor to make personal finance easy."}] + [
         {"role": m["role"], "content": m["content"]}
         for m in st.session_state.messages
     ]
