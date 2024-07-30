@@ -2,13 +2,11 @@ from openai import OpenAI
 import streamlit as st
 
 st.title("FinFolio")
-st.caption("Your AI financial advisor")
+st.subheader("Your AI financial advisor")
+
+st.markdown("[Visit our website](https://www.example.com)")
 
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
-
-
-def get_avatar(role):
-    return "person.png" if role == "user" else "finfolio.png"
 
 
 if "openai_model" not in st.session_state:
