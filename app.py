@@ -2,6 +2,7 @@ from openai import OpenAI
 import streamlit as st
 
 st.title("FinFolio")
+st.caption("Your AI financial advisor")
 
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
