@@ -1,7 +1,7 @@
 from openai import OpenAI
 import streamlit as st
 
-st.title("FinanceGPT")
+st.title("FinFolio")
 
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
@@ -21,7 +21,7 @@ if prompt := st.chat_input("Ask a question"):
         st.markdown(prompt)
 
     # Prepare the context with the system message
-    context = [{"role": "system", "content": "You are a helpful financial advisor to make personal finance easy."}] + [
+    context = [{"role": "system", "content": "You are a helpful financial advisor to make personal finance easy. You are to only answer finance questions."}] + [
         {"role": m["role"], "content": m["content"]}
         for m in st.session_state.messages
     ]
