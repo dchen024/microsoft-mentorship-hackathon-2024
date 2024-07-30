@@ -4,7 +4,8 @@ import streamlit as st
 st.title("FinFolio")
 st.subheader("Your AI financial advisor")
 
-st.markdown("[Visit our website](https://www.example.com)")
+st.markdown(
+    "[View our slides](https://www.canva.com/design/DAGL9lTf6s4/kxLEls22StiCj49iUGVEwA/edit)")
 
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
